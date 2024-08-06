@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campanha Amanhecer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="nova logo" type="image/x-icon">
+</head>
+<body>
+    <header>
+    </header>
+
+    <nav class="navbar">
+        <a href="#sobre" class="nav-button">Sobre</a>
+        <a href="#como-ajudar" class="nav-button">Como Ajudar</a>
+        <a href="#fotos" class="nav-button">Fotos</a>
+        <a href="#doacoes" class="nav-button">Doações</a>
+        <a href="#contato" class="nav-button">Contato</a>
+    </nav>
+
+    <section id="sobre">
+        <h2>Sobre a Campanha</h2>
+        <p>A Campanha Social "Amanhecer" é uma iniciativa inspiradora que visa oferecer apoio essencial aos moradores de rua em Natal, RN. Formada por jovens dedicados da Paróquia Santo André de Soveral, a campanha tem como objetivo principal levar alimentos, roupas e cobertores para aqueles que mais necessitam.</p>
+        <p>Com um espírito de solidariedade e compaixão, os voluntários da Campanha "Amanhecer" se mobilizam para arrecadar e distribuir esses itens, proporcionando um alívio imediato para pessoas em situação de vulnerabilidade. Além de suprir necessidades básicas, a campanha busca também trazer esperança e dignidade para a vida dessas pessoas, mostrando que a comunidade se importa e está disposta a ajudar.</p>
+        <p>Junte-se a nós nessa missão de fazer a diferença e trazer um novo amanhecer para os moradores de rua de nossa cidade. Sua participação e apoio são fundamentais para que possamos continuar transformando vidas e construindo um futuro mais justo e humano.</p>
+    </section>
+
+    <section id="como-ajudar">
+        <h2>Como Ajudar</h2>
+        <p>A Campanha Social "Amanhecer" depende do apoio e solidariedade da comunidade para continuar seu trabalho essencial de ajudar os moradores de rua em Natal, RN. Existem várias maneiras de contribuir para esta causa nobre, e cada gesto faz uma grande diferença na vida de quem precisa:</p>
+        <ul>
+            <li><strong>Doação de Alimentos:</strong> Contribua com alimentos não perecíveis como arroz, feijão, macarrão, enlatados, leite em pó e biscoitos.</li>
+            <li><strong>Doação de Roupas e Cobertores:</strong> Doe roupas em bom estado, cobertores e agasalhos para ajudar a proteger do frio e das intempéries.</li>
+            <li><strong>Contribuição Financeira:</strong> Faça uma doação financeira para a compra de itens essenciais que complementam as doações recebidas.</li>
+            <li><strong>Voluntariado:</strong> Dedique seu tempo e talento como voluntário na campanha.</li>
+            <li><strong>Divulgação:</strong> Ajude a divulgar a campanha entre seus amigos, familiares e redes sociais.</li>
+            <li><strong>Parcerias:</strong> Empresas ou organizações podem formar parcerias com a campanha.</li>
+        </ul>
+        <p>Para fazer uma doação ou saber mais sobre como você pode se envolver, entre em contato conosco através do e-mail [email@example.com] ou pelo telefone (84) 1234-5678.</p>
+    </section>
+
+    <section id="fotos" class="gallery">
+        <h2>Fotos</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="evento 1.jpg" alt="Evento 1">
+            </div>
+            <div class="mySlides fade">
+                <img src="evento 2.jpg" alt="Evento 2">
+            </div>
+            <!-- Adicione mais slides conforme necessário -->
+        </div>
+    </section>
+
+    <section id="doacoes">
+        <h2>Doações</h2>
+        <p>Você pode contribuir com a Campanha Amanhecer fazendo uma doação via Pix. Use o código QR abaixo ou copie e cole o código Pix em seu aplicativo bancário.</p>
+        <div class="pix-donation">
+            <img src="caminho/para/o/qrcode.png" alt="QR Code Pix" class="pix-qr">
+            <p>Código Pix:</p>
+            <input type="text" id="pix-code" value="SUA-CHAVE-PIX-AQUI" readonly>
+            <button class="copy-button" onclick="copyPixCode()">Copiar Código Pix</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contato: email@example.com | Telefone: (00) 1234-5678</p>
+        <p>Siga-nos nas redes sociais</p>
+    </footer>
+
+    <script>
+        function copyPixCode() {
+            const pixCodeInput = document.getElementById("pix-code");
+            pixCodeInput.select();
+            pixCodeInput.setSelectionRange(0, 99999); // Para dispositivos móveis
+            document.execCommand("copy");
+
+            alert("Código Pix copiado para a área de transferência!");
+        }
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+</body>
+</html>
+
+
+

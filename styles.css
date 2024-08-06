@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-image: url('logo');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 15em 0;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.navbar {
+    background-color: #333;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.nav-button {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    background-color: #ffeb3b;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #ffd600;
+}
+
+section {
+    padding: 2em;
+    margin: 1em auto;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #ffeb3b;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f7f7f7;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    max-height: 400px;
+    margin: auto;
+    border: 5px solid #ccc;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.pix-donation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pix-qr {
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+#pix-code {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.copy-button {
+    background-color: #ffeb3b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+    background-color: #ffd600;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-button {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    section {
+        padding: 1em;
+        margin: 1em;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    ul li {
+        padding: 8px;
+    }
+
+    .pix-qr {
+        max-width: 100px;
+    }
+
+    #pix-code {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-button {
+        width: 100%;
+    }
+
+    ul li {
+        padding: 6px;
+    }
+
+    .pix-qr {
+        max-width: 80px;
+    }
+
+    #pix-code {
+        width: 100%;
+    }
+
+    .copy-button {
+        width: 100%;
+    }
+}
